@@ -1,5 +1,5 @@
 <?php
-  $access_token = 'gwzLA4l39L9m+2622e2/+aX6nwDLLl/Xwe98wiz3VY3a7pi0soN2a2pDKlHbmvF7Jn/L3Q0uCdFK0ImHBkzbMOMvNETfvvquw0jQVTkOwQPgLzCBLES92k7DiinRwS+Q1j7eRMiKOKFLEpDZ8pAG2gdB04t89/1O/w1cDnyilFU=';
+$access_token = 'gwzLA4l39L9m+2622e2/+aX6nwDLLl/Xwe98wiz3VY3a7pi0soN2a2pDKlHbmvF7Jn/L3Q0uCdFK0ImHBkzbMOMvNETfvvquw0jQVTkOwQPgLzCBLES92k7DiinRwS+Q1j7eRMiKOKFLEpDZ8pAG2gdB04t89/1O/w1cDnyilFU=';
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -45,4 +45,3 @@ if (!is_null($events['events'])) {
 	}
 }
 echo "OK";
-  ?>
