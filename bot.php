@@ -16,7 +16,9 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			if($text=='scss')
 			{
-		          $text='www.pea.co.th';
+		          $text='scss.pea.co.th';
+			}else{
+			  $text='มิรู้จะตอบอะไรเลยจ้า';
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
