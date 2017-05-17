@@ -14,6 +14,9 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
+			if($text == "คู่มือ"){
+				$text="Link";
+			}
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
