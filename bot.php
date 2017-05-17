@@ -14,8 +14,9 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
-			if($text == "1"){
-				$text="https://www.pea.co.th/Portals/4/Pean3/ucube/PresentUcUBEn3.pdf?ver=2017-05-11-140641-737";
+			if($text == "คู่มือ"){
+				$text="สามารถดาวโหลดได้ตามinkนี้ ";
+				$text+=" 1. https://www.pea.co.th/Portals/4/Pean3/ucube/PresentUcUBEn3.pdf?ver=2017-05-11-140641-737";
 			}
 			$replyToken = $event['replyToken'];
 
