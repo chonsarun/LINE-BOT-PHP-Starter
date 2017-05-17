@@ -1,6 +1,6 @@
 <?php
 $access_token ='gwzLA4l39L9m+2622e2/+aX6nwDLLl/Xwe98wiz3VY3a7pi0soN2a2pDKlHbmvF7Jn/L3Q0uCdFK0ImHBkzbMOMvNETfvvquw0jQVTkOwQPgLzCBLES92k7DiinRwS+Q1j7eRMiKOKFLEpDZ8pAG2gdB04t89/1O/w1cDnyilFU=';
-
+$text1 ="";
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -16,9 +16,10 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			if($text == "1"))
 			{
-		          $text='คู่มือ';
+			  $text1="คู่มือ";
+		          $text="คู่มือ";
 			}else{
-			  $text ="not";
+			  $text ="not work";
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
@@ -26,7 +27,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $text1
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
