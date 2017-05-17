@@ -14,11 +14,11 @@ if (!is_null($events['events'])) {
 			// Get text sent
 		
 			$text = $event['message']['text'];
-			if(strpos($text,'scss'))
+			if($text == "1"))
 			{
-		          $text='scss.pea.co.th';
+		          $text='คู่มือ';
 			}else{
-			  
+			  $text ="not";
 			}
 			// Get replyToken
 			$replyToken = $event['replyToken'];
