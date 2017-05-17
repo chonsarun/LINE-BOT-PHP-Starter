@@ -17,10 +17,8 @@ if (!is_null($events['events'])) {
 			if($text == "คู่มือ"){
 				
 				$text ="สวัสดีครับ สามารถดาวโหลดคู่มือการใช้งาน Ucube ได้ตามLinkนี้  https://www.pea.co.th/Portals/4/Pean3/ucube/PresentUcUBEn3.pdf?ver=2017-05-11-140641-737";
-			}
-			$replyToken = $event['replyToken'];
-
-			// Build message to reply back
+				$replyToken = $event['replyToken'];
+				// Build message to reply back
 			$messages = [
 				'type' => 'text',
 				'text' => $text
@@ -45,6 +43,10 @@ if (!is_null($events['events'])) {
 			curl_close($ch);
 
 			echo $result . "\r\n";
+			}//end if คู่มือ
+			
+
+			
 		}
 	}
 }
