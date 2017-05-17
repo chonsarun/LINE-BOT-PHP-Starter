@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 		
 			$text = $event['message']['text'];
-			if(strpos($text,'1','scss'))
+			if(strpos($text,'scss'))
 			{
 		          $text='scss.pea.co.th';
 			}else{
