@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			if($text == "คู่มือ"){
 				
-				$text ="สามารถดาวโหลดได้ตามinkนี้ /n https://www.pea.co.th/Portals/4/Pean3/ucube/PresentUcUBEn3.pdf?ver=2017-05-11-140641-737";
+				$text ="สวัสดีครับ สามารถดาวโหลดคู่มือการใช้งาน Ucube ได้ตามLinkนี้  https://www.pea.co.th/Portals/4/Pean3/ucube/PresentUcUBEn3.pdf?ver=2017-05-11-140641-737";
 			}
 			$replyToken = $event['replyToken'];
 
