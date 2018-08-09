@@ -14,9 +14,9 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
-			if($text == "ตัดไฟ"){
+			if(stripos($text, "ไฟดับ") !== false){
 				
-				$text ="สวัสดีครับ เราได้รับแจ้งเหตุที่ท่าแจ้งแล้วครับ";
+				$text ="สวัสดีครับ เราได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
 				$replyToken = $event['replyToken'];
 				// Build message to reply back
 			$messages = [
