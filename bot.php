@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
-			if(stripos($text, "ไฟดับ") || stripos($text, "ไฟฟ้าดับ")!== false){
+			if(stripos($text, "ไฟดับ") || stripos($text, "ไฟฟ้าดับ")=== true){
 				
 				$text ="สวัสดีครับ ขณะนี้ กฟอ.หนองไผ่ ได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
 				$replyToken = $event['replyToken'];
