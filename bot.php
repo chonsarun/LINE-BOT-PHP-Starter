@@ -1,5 +1,5 @@
 <?php
-$access_token ='gwzLA4l39L9m+2622e2/+aX6nwDLLl/Xwe98wiz3VY3a7pi0soN2a2pDKlHbmvF7Jn/L3Q0uCdFK0ImHBkzbMOMvNETfvvquw0jQVTkOwQPgLzCBLES92k7DiinRwS+Q1j7eRMiKOKFLEpDZ8pAG2gdB04t89/1O/w1cDnyilFU=';
+$access_token ='ebHgaWHad9MEebPK+IZ9h/fewvrhPd+XgE8WQ+sZrSNvAbviE6qLzSdHpL6NPIqZtjU0g22dZ9HV9Am0u2eHF47Zx4v9eAmsu0+rw6Ksggn8blQwBhhxewvDImWgzEaFvyqr59+y5BR0FxQXtPf9SAdB04t89/1O/w1cDnyilFU=';
 $text1 ="";
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -14,9 +14,9 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
-			if($text == "คู่มือ"){
+			if($text == "ตัดไฟ"){
 				
-				$text ="สวัสดีครับ สามารถดาวโหลดคู่มือการใช้งาน Ucube ได้ตามLinkนี้  https://www.pea.co.th/Portals/4/Pean3/ucube/PresentUcUBEn3.pdf?ver=2017-05-11-140641-737";
+				$text ="สวัสดีครับ เราได้รับแจ้งบริการแล้ว";
 				$replyToken = $event['replyToken'];
 				// Build message to reply back
 			$messages = [
