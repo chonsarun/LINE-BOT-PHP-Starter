@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			if(stripos($text, "ไฟดับ") !== false){
 				
-				$text ="สวัสดีครับ เราได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
+				$text ="สวัสดีครับ ขณะนี้ กฟอ.หนองไผ่ ได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
 				$replyToken = $event['replyToken'];
 				// Build message to reply back
 			$messages = [
