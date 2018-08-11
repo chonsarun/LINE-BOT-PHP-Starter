@@ -13,10 +13,11 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
+			$user = $event['message']['id'];
 			// Get replyToken
 			if(strpos($text,"ไฟดับ")!== false||strpos($text,"ไฟฟ้าดับ")!== false){
 				
-				$text ="สวัสดีครับ ขณะนี้ กฟอ.หนองไผ่ ได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
+				$text ="สวัสดีครับ คุณ".$user." ขณะนี้ กฟอ.หนองไผ่ ได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
 				$replyToken = $event['replyToken'];
 				// Build message to reply back
 			$messages = [
