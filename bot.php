@@ -14,7 +14,23 @@ $events = json_decode($content, true);
 						// Get text sent
 						$text = $event['message']['text'];
 						$user = $event['source']['userId'];
-						$urltest = " https://api.line.me/v2/bot/profile/".$user;
+						// Fucntion Return picName
+						function nameLine($user,$access_token){
+							$nameid = $user;
+							$urlname = "https://api.line.me/v2/bot/profile/".$nameid;
+							$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+							$ch = curl_init($url);
+							curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+							curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+							curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+							$result = curl_exec($ch);
+
+							$name = json_decode($result, true);
+							return  $name['displayName'];
+							curl_close($ch);
+						}
+						
 						// Get replyToken
 						if(strpos($text,"ไฟดับ")!== false||strpos($text,"ไฟฟ้าดับ")!== false){
 							
@@ -44,22 +60,7 @@ $events = json_decode($content, true);
 						echo $result . "\r\n";
 						}//end if คู่มือ
 						
-						// Fucntion Return picName
-						function nameLine($user,$access_token){
-							$nameid= $user;
-							$urlname = "https://api.line.me/v2/bot/profile/".$nameid;
-							$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-							$ch = curl_init($url);
-							curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-							curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-							curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-							$result = curl_exec($ch);
-
-							$name = json_decode($result, true);
-							return  $name['displayName'];;
-							curl_close($ch);
-						}
+						
 						
 					}
 				}
