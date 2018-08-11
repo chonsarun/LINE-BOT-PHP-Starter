@@ -13,7 +13,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['message']['text'];
-			$user = $event['message']['id'];
+			$user = $event['source']['type']['userId'];
 			// Get replyToken
 			if(strpos($text,"ไฟดับ")!== false||strpos($text,"ไฟฟ้าดับ")!== false){
 				
