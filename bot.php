@@ -19,7 +19,7 @@ $events = json_decode($content, true);
 							$nameid = $user;
 							$urlname = "https://api.line.me/v2/bot/profile/".$nameid;
 							$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-							$ch = curl_init($url);
+							$ch = curl_init($urlname);
 							curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 							curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 							curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
