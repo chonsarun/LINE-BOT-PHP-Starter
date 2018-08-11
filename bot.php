@@ -18,7 +18,7 @@ $events = json_decode($content, true);
 						// Get replyToken
 						if(strpos($text,"ไฟดับ")!== false||strpos($text,"ไฟฟ้าดับ")!== false){
 							
-							$text ="สวัสดีครับ คุณ".nameLine($user)." ขณะนี้ กฟอ.หนองไผ่ ได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
+							$text ="สวัสดีครับ คุณ".nameLine($user,$access_token)." ขณะนี้ กฟอ.หนองไผ่ ได้รับแจ้งเหตุที่ท่านแจ้งแล้วครับ";
 							$replyToken = $event['replyToken'];
 							// Build message to reply back
 						$messages = [
@@ -45,9 +45,9 @@ $events = json_decode($content, true);
 						}//end if คู่มือ
 						
 						// Fucntion Return picName
-						function nameLine($user){
+						function nameLine($user,$access_token){
 							$nameid= $user;
-							$urlname = "https://api.line.me/v2/".$nameid;
+							$urlname = "https://api.line.me/v2/bot/profile/".$nameid;
 							$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 							$ch = curl_init($url);
 							curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
@@ -57,7 +57,7 @@ $events = json_decode($content, true);
 							$result = curl_exec($ch);
 
 							$name = json_decode($result, true);
-							return $user = $name['displayName'];;
+							return  $name['displayName'];;
 							curl_close($ch);
 						}
 						
